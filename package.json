@@ -1,0 +1,31 @@
+{
+  "name": "rollu-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "rollup -c -w",
+    "build": "rollup -c",
+    "start": "serve ./dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.23.6",
+    "@babel/preset-react": "^7.23.3",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "rollup": "^4.9.0",
+    "serve": "^14.2.1"
+  },
+  "dependencies": {
+    "antd-mobile": "^5.33.1",
+    "pnpm": "^8.8.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup-plugin-styles": "^4.0.0"
+  }
+}
