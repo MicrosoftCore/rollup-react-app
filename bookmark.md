@@ -17,18 +17,91 @@ src.utils.PluginDriver > hookReduceArg0 > runHook
 
 
 
+PluginDriver
+Graph
+Module
+ModuleLoader
+
+
+
 Graph > generateModuleGraph
 
 
 
-options          src/rollup/rollup.getProcessedInputOptions
-buildStart       src/rollup/rollup.catchUnfinishedHookActions
-resolveId        src/rollup/rollup.catchUnfinishedHookActions graph.build() 
-                 => src/Graph.build => generateModuleGraph => addEntryModules 
-                 => src/ModuleLoader.loadEntryModule
-                [
-                    => src/utils.resolved.resolveId
-                    => src/utils.resolved.resolveIdViaPlugins => pluginDriver.hookFirstAndGetPlugin
-                    => src/utils.PluginDriver.hookFirstAndGetPlugin => PluginDriver.runHook('resolveId')
-                ]
-load            
+                    
+src/rollup/rollup
+rollup
+	rollupInternal
+		getInputOptions
+			getProcessedInputOptions
+				[
+					'rollup-plugin-styles-shaking' 
+						options
+				]
+		catchUnfinishedHookActions(
+			PluginDriver.hookParallel('buildStart')
+			PluginDriver.runHook('buildStart')
+			[
+				'rollup-plugin-styles-shaking'
+					buildStart
+			]
+			Graph.build
+			Graph.generateModuleGraph
+				ModuleLoader.addEntryModules
+				ModuleLoader.loadEntryModule
+					src/utils/resolved.resolveId
+					src/utils/resolved.resolveIdViaPlugins
+					PluginDriver.hookFirstAndGetPlugin('resolveId') 
+					PluginDriver.runHook('resolveId')
+					[
+						'rollup-plugin-commonjs'
+							resolveId(
+								resolveId <= PluginContext.resolve
+									ModuleLoader.resolveId
+										src/utils/resolved.resolveId
+										src/utils/resolved.resolveIdViaPlugins
+										PluginDriver.hookFirstAndGetPlugin('resolveId') 
+										PluginDriver.runHook('resolveId')
+										[
+											'rollup-plugin-styles-shaking' 
+												resolveId
+										]
+										[
+											'rollup-plugin-node-resolve'
+												resolveId
+													order: 'post'
+													handler
+														PluginContext.resolve
+														ModuleLoader.resolveId
+														src/utils/resolved.resolveId
+														src/utils/resolved.resolveIdViaPlugins
+														PluginDriver.hookFirstAndGetPlugin('resolveId') 
+														PluginDriver.runHook('resolveId')
+										]
+								PluginContext.load(resolved)
+									ModuleLoader.preloadModule
+									ModuleLoader.fetchModule
+									ModuleLoader.addModuleSource
+										source <= Graph.fileOperationQueue<src.utils.Queue>.run(
+											PluginDriver.hookFirst('load')
+											PluginDriver.hookFirstAndGetPlugin('load')
+											PluginDriver.runHook('load')
+											[
+												'rollup-plugin-styles-shaking' 
+													load
+											]
+										)
+										src/utils/transform(source)
+										PluginDriver.hookReduceArg0('transform')
+										PluginDriver.runHook('transform')
+										[
+											'rollup-plugin-styles'
+												transform
+										]
+										[
+											'rollup-plugin-styles-shaking'
+												transform
+										]   
+							)
+					]
+		)
