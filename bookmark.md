@@ -27,6 +27,15 @@ ModuleLoader
 Graph > generateModuleGraph
 
 
+function ResolveIdUtil(){
+	src/utils/resolved.resolveId
+	src/utils/resolved.resolveIdViaPlugins
+	PluginDriver.hookFirstAndGetPlugin('resolveId') 
+	PluginDriver.runHook('resolveId')
+	Promise.then
+	processTicksAndRejections runMicrotasks()
+	handler.apply(context, parameters);
+}
 
                     
 src/rollup/rollup
@@ -49,19 +58,14 @@ rollup
 			Graph.generateModuleGraph
 				ModuleLoader.addEntryModules
 				ModuleLoader.loadEntryModule
-					src/utils/resolved.resolveId
-					src/utils/resolved.resolveIdViaPlugins
-					PluginDriver.hookFirstAndGetPlugin('resolveId') 
-					PluginDriver.runHook('resolveId')
+					ResolveIdUtil()
 					[
 						'rollup-plugin-commonjs'
 							resolveId(
-								resolveId <= PluginContext.resolve
+								resolveId <= 
+									PluginContext.resolve
 									ModuleLoader.resolveId
-										src/utils/resolved.resolveId
-										src/utils/resolved.resolveIdViaPlugins
-										PluginDriver.hookFirstAndGetPlugin('resolveId') 
-										PluginDriver.runHook('resolveId')
+										ResolveIdUtil()
 										[
 											'rollup-plugin-styles-shaking' 
 												resolveId
@@ -73,10 +77,7 @@ rollup
 													handler
 														PluginContext.resolve
 														ModuleLoader.resolveId
-														src/utils/resolved.resolveId
-														src/utils/resolved.resolveIdViaPlugins
-														PluginDriver.hookFirstAndGetPlugin('resolveId') 
-														PluginDriver.runHook('resolveId')
+															ResolveIdUtil()
 										]
 								PluginContext.load(resolved)
 									ModuleLoader.preloadModule
