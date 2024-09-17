@@ -3977,7 +3977,7 @@ function requireReactDom_development () {
 	// already attempted and failed to hydrate at that level. Also check if we're
 	// already rendering that lane, which is rare but could happen.
 	if((lane&(root.suspendedLanes|renderLanes))!==NoLane){// Give up trying to hydrate and fall back to client render.
-	return NoLane;}return lane;}function addFiberToLanesMap(root,fiber,lanes){if(!isDevToolsPresent){return;}var pendingUpdatersLaneMap=root.pendingUpdatersLaneMap;while(lanes>0){var index=laneToIndex(lanes);var lane=1<<index;var updaters=pendingUpdatersLaneMap[index];updaters.add(fiber);lanes&=~lane;}}function movePendingFibersToMemoized(root,lanes){if(!isDevToolsPresent){return;}var pendingUpdatersLaneMap=root.pendingUpdatersLaneMap;var memoizedUpdaters=root.memoizedUpdaters;while(lanes>0){var index=laneToIndex(lanes);var lane=1<<index;var updaters=pendingUpdatersLaneMap[index];if(updaters.size>0){updaters.forEach(function(fiber){var alternate=fiber.alternate;if(alternate===null||!memoizedUpdaters.has(alternate)){memoizedUpdaters.add(fiber);}});updaters.clear();}lanes&=~lane;}}function getTransitionsForLanes(root,lanes){{return null;}}var DiscreteEventPriority=SyncLane;var ContinuousEventPriority=InputContinuousLane;var DefaultEventPriority=DefaultLane;var IdleEventPriority=IdleLane;var currentUpdatePriority=NoLane;function getCurrentUpdatePriority(){return currentUpdatePriority;}function setCurrentUpdatePriority(newPriority){currentUpdatePriority=newPriority;}function runWithPriority(priority,fn){var previousPriority=currentUpdatePriority;try{currentUpdatePriority=priority;return fn();}finally{currentUpdatePriority=previousPriority;}}function higherEventPriority(a,b){return a!==0&&a<b?a:b;}function lowerEventPriority(a,b){return a>b?a:b;}function isHigherEventPriority(a,b){return a!==0&&a<b;}function lanesToEventPriority(lanes){var lane=getHighestPriorityLane(lanes);if(!isHigherEventPriority(DiscreteEventPriority,lane)){return DiscreteEventPriority;}if(!isHigherEventPriority(ContinuousEventPriority,lane)){return ContinuousEventPriority;}if(includesNonIdleWork(lane)){return DefaultEventPriority;}return IdleEventPriority;}// This is imported by the event replaying implementation in React DOM. It's
+	return NoLane;}return lane;}function addFiberToLanesMap(root,fiber,lanes){if(!isDevToolsPresent){return;}var pendingUpdatersLaneMap=root.pendingUpdatersLaneMap;while(lanes>0){var index=laneToIndex(lanes);var lane=1<<index;var updaters=pendingUpdatersLaneMap[index];updaters.add(fiber);lanes&=~lane;}}function movePendingFibersToMemoized(root,lanes){if(!isDevToolsPresent){return;}var pendingUpdatersLaneMap=root.pendingUpdatersLaneMap;var memoizedUpdaters=root.memoizedUpdaters;while(lanes>0){var index=laneToIndex(lanes);var lane=1<<index;var updaters=pendingUpdatersLaneMap[index];if(updaters.size>0){updaters.forEach(function(fiber){var alternate=fiber.alternate;if(alternate===null||!memoizedUpdaters.has(alternate)){memoizedUpdaters.add(fiber);}});updaters.clear();}lanes&=~lane;}}function getTransitionsForLanes(root,lanes){{return null;}}var DiscreteEventPriority=SyncLane;var ContinuousEventPriority=InputContinuousLane;var DefaultEventPriority=DefaultLane;var IdleEventPriority=IdleLane;var currentUpdatePriority=NoLane;function getCurrentUpdatePriority(){return currentUpdatePriority;}function setCurrentUpdatePriority(newPriority){currentUpdatePriority=newPriority;}function runWithPriority(priority,fn){var previousPriority=currentUpdatePriority;try{currentUpdatePriority=priority;return fn();}finally{currentUpdatePriority=previousPriority;}}function higherEventPriority(a,b){return a!==0&&a<b?a:b;}function lowerEventPriority(a,b){return a===0||a>b?a:b;}function isHigherEventPriority(a,b){return a!==0&&a<b;}function lanesToEventPriority(lanes){var lane=getHighestPriorityLane(lanes);if(!isHigherEventPriority(DiscreteEventPriority,lane)){return DiscreteEventPriority;}if(!isHigherEventPriority(ContinuousEventPriority,lane)){return ContinuousEventPriority;}if(includesNonIdleWork(lane)){return DefaultEventPriority;}return IdleEventPriority;}// This is imported by the event replaying implementation in React DOM. It's
 	// in a separate file to break a circular dependency between the renderer and
 	// the reconciler.
 	function isRootDehydrated(root){var currentState=root.current.memoizedState;return currentState.isDehydrated;}var _attemptSynchronousHydration;function setAttemptSynchronousHydration(fn){_attemptSynchronousHydration=fn;}function attemptSynchronousHydration(fiber){_attemptSynchronousHydration(fiber);}var attemptContinuousHydration;function setAttemptContinuousHydration(fn){attemptContinuousHydration=fn;}var attemptHydrationAtCurrentPriority;function setAttemptHydrationAtCurrentPriority(fn){attemptHydrationAtCurrentPriority=fn;}var getCurrentUpdatePriority$1;function setGetCurrentUpdatePriority(fn){getCurrentUpdatePriority$1=fn;}var attemptHydrationAtPriority;function setAttemptHydrationAtPriority(fn){attemptHydrationAtPriority=fn;}// TODO: Upgrade this definition once we're on a newer version of Flow that
@@ -4649,7 +4649,7 @@ function requireReactDom_development () {
 	// because these events do not consistently bubble in the DOM.
 	var nonDelegatedEvents=new Set(['cancel','close','invalid','load','scroll','toggle'].concat(mediaEventTypes));function executeDispatch(event,listener,currentTarget){var type=event.type||'unknown-event';event.currentTarget=currentTarget;invokeGuardedCallbackAndCatchFirstError(type,listener,undefined,event);event.currentTarget=null;}function processDispatchQueueItemsInOrder(event,dispatchListeners,inCapturePhase){var previousInstance;if(inCapturePhase){for(var i=dispatchListeners.length-1;i>=0;i--){var _dispatchListeners$i=dispatchListeners[i],instance=_dispatchListeners$i.instance,currentTarget=_dispatchListeners$i.currentTarget,listener=_dispatchListeners$i.listener;if(instance!==previousInstance&&event.isPropagationStopped()){return;}executeDispatch(event,listener,currentTarget);previousInstance=instance;}}else {for(var _i=0;_i<dispatchListeners.length;_i++){var _dispatchListeners$_i=dispatchListeners[_i],_instance=_dispatchListeners$_i.instance,_currentTarget=_dispatchListeners$_i.currentTarget,_listener=_dispatchListeners$_i.listener;if(_instance!==previousInstance&&event.isPropagationStopped()){return;}executeDispatch(event,_listener,_currentTarget);previousInstance=_instance;}}}function processDispatchQueue(dispatchQueue,eventSystemFlags){var inCapturePhase=(eventSystemFlags&IS_CAPTURE_PHASE)!==0;for(var i=0;i<dispatchQueue.length;i++){var _dispatchQueue$i=dispatchQueue[i],event=_dispatchQueue$i.event,listeners=_dispatchQueue$i.listeners;processDispatchQueueItemsInOrder(event,listeners,inCapturePhase);//  event system doesn't use pooling.
 	}// This would be a good time to rethrow if any of the event handlers threw.
-	rethrowCaughtError();}function dispatchEventsForPlugins(domEventName,eventSystemFlags,nativeEvent,targetInst,targetContainer){var nativeEventTarget=getEventTarget(nativeEvent);var dispatchQueue=[];extractEvents$5(dispatchQueue,domEventName,targetInst,nativeEvent,nativeEventTarget,eventSystemFlags);processDispatchQueue(dispatchQueue,eventSystemFlags);}function listenToNonDelegatedEvent(domEventName,targetElement){{if(!nonDelegatedEvents.has(domEventName)){error('Did not expect a listenToNonDelegatedEvent() call for "%s". '+'This is a bug in React. Please file an issue.',domEventName);}}var isCapturePhaseListener=false;var listenerSet=getEventListenerSet(targetElement);var listenerSetKey=getListenerSetKey(domEventName);if(!listenerSet.has(listenerSetKey)){addTrappedEventListener(targetElement,domEventName,IS_NON_DELEGATED,isCapturePhaseListener);listenerSet.add(listenerSetKey);}}function listenToNativeEvent(domEventName,isCapturePhaseListener,target){{if(nonDelegatedEvents.has(domEventName)&&!isCapturePhaseListener){error('Did not expect a listenToNativeEvent() call for "%s" in the bubble phase. '+'This is a bug in React. Please file an issue.',domEventName);}}var eventSystemFlags=0;if(isCapturePhaseListener){eventSystemFlags|=IS_CAPTURE_PHASE;}addTrappedEventListener(target,domEventName,eventSystemFlags,isCapturePhaseListener);}// This is only used by createEventHandle when the
+	rethrowCaughtError();}function dispatchEventsForPlugins(domEventName,eventSystemFlags,nativeEvent,targetInst,targetContainer){var nativeEventTarget=getEventTarget(nativeEvent);var dispatchQueue=[];extractEvents$5(dispatchQueue,domEventName,targetInst,nativeEvent,nativeEventTarget,eventSystemFlags);processDispatchQueue(dispatchQueue,eventSystemFlags);}function listenToNonDelegatedEvent(domEventName,targetElement){{if(!nonDelegatedEvents.has(domEventName)){error('Did not expect a listenToNonDelegatedEvent() call for "%s". '+'This is a bug in React. Please file an issue.',domEventName);}}var isCapturePhaseListener=false;var listenerSet=getEventListenerSet(targetElement);var listenerSetKey=getListenerSetKey(domEventName,isCapturePhaseListener);if(!listenerSet.has(listenerSetKey)){addTrappedEventListener(targetElement,domEventName,IS_NON_DELEGATED,isCapturePhaseListener);listenerSet.add(listenerSetKey);}}function listenToNativeEvent(domEventName,isCapturePhaseListener,target){{if(nonDelegatedEvents.has(domEventName)&&!isCapturePhaseListener){error('Did not expect a listenToNativeEvent() call for "%s" in the bubble phase. '+'This is a bug in React. Please file an issue.',domEventName);}}var eventSystemFlags=0;if(isCapturePhaseListener){eventSystemFlags|=IS_CAPTURE_PHASE;}addTrappedEventListener(target,domEventName,eventSystemFlags,isCapturePhaseListener);}// This is only used by createEventHandle when the
 	var listeningMarker='_reactListening'+Math.random().toString(36).slice(2);function listenToAllSupportedEvents(rootContainerElement){if(!rootContainerElement[listeningMarker]){rootContainerElement[listeningMarker]=true;allNativeEvents.forEach(function(domEventName){// We handle selectionchange separately because it
 	// doesn't bubble and needs to be on the document.
 	if(domEventName!=='selectionchange'){if(!nonDelegatedEvents.has(domEventName)){listenToNativeEvent(domEventName,false,rootContainerElement);}listenToNativeEvent(domEventName,true,rootContainerElement);}});var ownerDocument=rootContainerElement.nodeType===DOCUMENT_NODE?rootContainerElement:rootContainerElement.ownerDocument;if(ownerDocument!==null){// The selectionchange event also needs deduplication
@@ -4718,7 +4718,7 @@ function requireReactDom_development () {
 	// This is because we only process this plugin
 	// in the bubble phase, so we need to accumulate two
 	// phase event listeners.
-	function accumulateEnterLeaveTwoPhaseListeners(dispatchQueue,leaveEvent,enterEvent,from,to){var common=from&&to?getLowestCommonAncestor(from,to):null;if(from!==null){accumulateEnterLeaveListenersForEvent(dispatchQueue,leaveEvent,from,common,false);}if(to!==null&&enterEvent!==null){accumulateEnterLeaveListenersForEvent(dispatchQueue,enterEvent,to,common,true);}}function getListenerSetKey(domEventName,capture){return domEventName+"__"+('bubble');}var didWarnInvalidHydration=false;var DANGEROUSLY_SET_INNER_HTML='dangerouslySetInnerHTML';var SUPPRESS_CONTENT_EDITABLE_WARNING='suppressContentEditableWarning';var SUPPRESS_HYDRATION_WARNING='suppressHydrationWarning';var AUTOFOCUS='autoFocus';var CHILDREN='children';var STYLE='style';var HTML$1='__html';var warnedUnknownTags;var validatePropertiesInDevelopment;var warnForPropDifference;var warnForExtraAttributes;var warnForInvalidEventListener;var canDiffStyleForHydrationWarning;var normalizeHTML;{warnedUnknownTags={// There are working polyfills for <dialog>. Let people use it.
+	function accumulateEnterLeaveTwoPhaseListeners(dispatchQueue,leaveEvent,enterEvent,from,to){var common=from&&to?getLowestCommonAncestor(from,to):null;if(from!==null){accumulateEnterLeaveListenersForEvent(dispatchQueue,leaveEvent,from,common,false);}if(to!==null&&enterEvent!==null){accumulateEnterLeaveListenersForEvent(dispatchQueue,enterEvent,to,common,true);}}function getListenerSetKey(domEventName,capture){return domEventName+"__"+(capture?'capture':'bubble');}var didWarnInvalidHydration=false;var DANGEROUSLY_SET_INNER_HTML='dangerouslySetInnerHTML';var SUPPRESS_CONTENT_EDITABLE_WARNING='suppressContentEditableWarning';var SUPPRESS_HYDRATION_WARNING='suppressHydrationWarning';var AUTOFOCUS='autoFocus';var CHILDREN='children';var STYLE='style';var HTML$1='__html';var warnedUnknownTags;var validatePropertiesInDevelopment;var warnForPropDifference;var warnForExtraAttributes;var warnForInvalidEventListener;var canDiffStyleForHydrationWarning;var normalizeHTML;{warnedUnknownTags={// There are working polyfills for <dialog>. Let people use it.
 	dialog:true,// Electron ships a custom <webview> tag to display external web content in
 	// an isolated frame and process.
 	// This tag is not present in non Electron environments such as JSDom which
@@ -7952,14 +7952,276 @@ var m = reactDomExports;
   };
 }
 
-// import {Button} from 'antd-mobile';
+const canUseDom = !!(typeof window !== 'undefined' && typeof document !== 'undefined' && window.document && window.document.createElement);
+
+if (canUseDom) {
+  // Make sure the `:active` CSS selector of `button` and `a` take effect
+  // See: https://stackoverflow.com/questions/3885018/active-pseudo-class-doesnt-work-in-mobile-safari
+  document.addEventListener('touchstart', () => {}, true);
+}
+// Only for debugging. Must COMMENT this line before commit:
+// import './css-vars-patch.less'
+
+/******************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+***************************************************************************** */
+
+function __awaiter(thisArg, _arguments, P, generator) {
+  function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+  return new (P || (P = Promise))(function (resolve, reject) {
+      function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+      function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+      function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+      step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
+}
+
+typeof SuppressedError === "function" ? SuppressedError : function (error, suppressed, message) {
+  var e = new Error(message);
+  return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
+};
+
+var classnames = {exports: {}};
+
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+classnames.exports;
+
+(function (module) {
+	/* global define */
+
+	(function () {
+
+	  var hasOwn = {}.hasOwnProperty;
+	  function classNames() {
+	    var classes = '';
+	    for (var i = 0; i < arguments.length; i++) {
+	      var arg = arguments[i];
+	      if (arg) {
+	        classes = appendClass(classes, parseValue(arg));
+	      }
+	    }
+	    return classes;
+	  }
+	  function parseValue(arg) {
+	    if (typeof arg === 'string' || typeof arg === 'number') {
+	      return arg;
+	    }
+	    if (typeof arg !== 'object') {
+	      return '';
+	    }
+	    if (Array.isArray(arg)) {
+	      return classNames.apply(null, arg);
+	    }
+	    if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+	      return arg.toString();
+	    }
+	    var classes = '';
+	    for (var key in arg) {
+	      if (hasOwn.call(arg, key) && arg[key]) {
+	        classes = appendClass(classes, key);
+	      }
+	    }
+	    return classes;
+	  }
+	  function appendClass(value, newClass) {
+	    if (!newClass) {
+	      return value;
+	    }
+	    if (value) {
+	      return value + ' ' + newClass;
+	    }
+	    return value + newClass;
+	  }
+	  if (module.exports) {
+	    classNames.default = classNames;
+	    module.exports = classNames;
+	  } else {
+	    window.classNames = classNames;
+	  }
+	})(); 
+} (classnames));
+
+var classnamesExports = classnames.exports;
+var classNames = /*@__PURE__*/getDefaultExportFromCjs(classnamesExports);
+
+function withNativeProps(props, element) {
+  const p = Object.assign({}, element.props);
+  if (props.className) {
+    p.className = classNames(element.props.className, props.className);
+  }
+  if (props.style) {
+    p.style = Object.assign(Object.assign({}, p.style), props.style);
+  }
+  if (props.tabIndex !== undefined) {
+    p.tabIndex = props.tabIndex;
+  }
+  for (const key in props) {
+    if (!props.hasOwnProperty(key)) continue;
+    if (key.startsWith('data-') || key.startsWith('aria-')) {
+      p[key] = props[key];
+    }
+  }
+  return /*#__PURE__*/React.cloneElement(element, p);
+}
+
+function mergeProps(...items) {
+  const ret = {};
+  items.forEach(item => {
+    if (item) {
+      Object.keys(item).forEach(key => {
+        if (item[key] !== undefined) {
+          ret[key] = item[key];
+        }
+      });
+    }
+  });
+  return ret;
+}
+
+const classPrefix$1 = `adm-dot-loading`;
+const colorRecord = {
+  default: 'var(--adm-color-weak)',
+  primary: 'var(--adm-color-primary)',
+  white: 'var(--adm-color-white)'
+};
+const defaultProps$1 = {
+  color: 'default'
+};
+const DotLoading$1 = /*#__PURE__*/reactExports.memo(p => {
+  var _a;
+  const props = mergeProps(defaultProps$1, p);
+  return withNativeProps(props, /*#__PURE__*/React.createElement("div", {
+    style: {
+      color: (_a = colorRecord[props.color]) !== null && _a !== void 0 ? _a : props.color
+    },
+    className: classNames('adm-loading', classPrefix$1)
+  }, /*#__PURE__*/React.createElement("svg", {
+    height: '1em',
+    viewBox: '0 0 100 40',
+    style: {
+      verticalAlign: '-0.125em'
+    }
+  }, /*#__PURE__*/React.createElement("g", {
+    stroke: 'none',
+    strokeWidth: '1',
+    fill: 'none',
+    fillRule: 'evenodd'
+  }, /*#__PURE__*/React.createElement("g", {
+    transform: 'translate(-100.000000, -71.000000)'
+  }, /*#__PURE__*/React.createElement("g", {
+    transform: 'translate(95.000000, 71.000000)'
+  }, /*#__PURE__*/React.createElement("g", {
+    transform: 'translate(5.000000, 0.000000)'
+  }, [0, 1, 2].map(i => /*#__PURE__*/React.createElement("rect", {
+    key: i,
+    fill: 'currentColor',
+    x: 20 + i * 26,
+    y: '16',
+    width: '8',
+    height: '8',
+    rx: '2'
+  }, /*#__PURE__*/React.createElement("animate", {
+    attributeName: 'y',
+    from: '16',
+    to: '16',
+    dur: '2s',
+    begin: `${i * 0.2}s`,
+    repeatCount: 'indefinite',
+    values: '16; 6; 26; 16; 16',
+    keyTimes: '0; 0.1; 0.3; 0.4; 1'
+  }))))))))));
+});
+
+var DotLoading = DotLoading$1;
+
+function isPromise(obj) {
+  return !!obj && typeof obj === 'object' && typeof obj.then === 'function';
+}
+
+const classPrefix = `adm-button`;
+const defaultProps = {
+  color: 'default',
+  fill: 'solid',
+  block: false,
+  loading: false,
+  loadingIcon: /*#__PURE__*/React.createElement(DotLoading, {
+    color: 'currentColor'
+  }),
+  type: 'button',
+  shape: 'default',
+  size: 'middle'
+};
+const Button$1 = /*#__PURE__*/reactExports.forwardRef((p, ref) => {
+  const props = mergeProps(defaultProps, p);
+  const [innerLoading, setInnerLoading] = reactExports.useState(false);
+  const nativeButtonRef = reactExports.useRef(null);
+  const loading = props.loading === 'auto' ? innerLoading : props.loading;
+  const disabled = props.disabled || loading;
+  reactExports.useImperativeHandle(ref, () => ({
+    get nativeElement() {
+      return nativeButtonRef.current;
+    }
+  }));
+  const handleClick = e => __awaiter(void 0, void 0, void 0, function* () {
+    if (!props.onClick) return;
+    const promise = props.onClick(e);
+    if (isPromise(promise)) {
+      try {
+        setInnerLoading(true);
+        yield promise;
+        setInnerLoading(false);
+      } catch (e) {
+        setInnerLoading(false);
+        throw e;
+      }
+    }
+  });
+  return withNativeProps(props, /*#__PURE__*/React.createElement("button", {
+    ref: nativeButtonRef,
+    type: props.type,
+    onClick: handleClick,
+    className: classNames(classPrefix, {
+      [`${classPrefix}-${props.color}`]: props.color,
+      [`${classPrefix}-block`]: props.block,
+      [`${classPrefix}-disabled`]: disabled,
+      [`${classPrefix}-fill-outline`]: props.fill === 'outline',
+      [`${classPrefix}-fill-none`]: props.fill === 'none',
+      [`${classPrefix}-mini`]: props.size === 'mini',
+      [`${classPrefix}-small`]: props.size === 'small',
+      [`${classPrefix}-large`]: props.size === 'large',
+      [`${classPrefix}-loading`]: loading
+    }, `${classPrefix}-shape-${props.shape}`),
+    disabled: disabled,
+    onMouseDown: props.onMouseDown,
+    onMouseUp: props.onMouseUp,
+    onTouchStart: props.onTouchStart,
+    onTouchEnd: props.onTouchEnd
+  }, loading ? /*#__PURE__*/React.createElement("div", {
+    className: `${classPrefix}-loading-wrapper`
+  }, props.loadingIcon, props.loadingText) : /*#__PURE__*/React.createElement("span", null, props.children)));
+});
+
+var Button = Button$1;
 
 function App() {
-  return (
-    /*#__PURE__*/
-    // <Button color='primary'>Rollup is amazing!!!</Button>
-    React.createElement("div", null, "Rollup is amazing!!!")
-  );
+  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", null, "Rollup is amazing!!!"), /*#__PURE__*/React.createElement(Button, {
+    color: "primary"
+  }, "Rollup is amazing!!!"));
 }
 
 client.createRoot(document.querySelector('#root')).render( /*#__PURE__*/React.createElement(App, null));

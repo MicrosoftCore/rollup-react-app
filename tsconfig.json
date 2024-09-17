@@ -1,0 +1,50 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./",
+		"rootDir": "plugins",
+		"outDir": "lib",
+		"target": "ES2017",
+		"module": "ESNext",
+		"declaration": true,
+		"declarationMap": true,
+		"moduleResolution": "Node",
+		"jsx": "react",
+		"moduleDetection": "legacy",
+		"noImplicitAny": true,
+		"noUnusedLocals": true,
+		"stripInternal": false,
+		"pretty": true,
+		"strict": false,
+		"allowJs": false,
+		"noErrorTruncation": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"skipLibCheck": true,
+		"inlineSourceMap": true,
+		"strictFunctionTypes": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"inlineSources": true,
+		"preserveSymlinks": true,
+		"resolveJsonModule": true,
+		"lib": [
+			"DOM",
+			"ES2017",
+			"ES2020",
+			"ESNext"
+		],
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		},
+	},
+	"include": [
+		"plugins/**/*",
+		"types.d.ts"
+	],
+	"exclude": [
+		"lib",
+		"node_modules"
+	]
+}
