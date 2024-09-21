@@ -6,11 +6,12 @@
   "scripts": {
     "start": "tsc -w",
     "watch": "rollup -c -w",
-    "build": "rollup -c",
+    "build": "rimraf ./dist && rollup -c",
     "serve": "serve ./dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
+  "type": "module",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.23.6",
@@ -23,6 +24,7 @@
     "serve": "^14.2.1"
   },
   "dependencies": {
+    "@rollkits/plugin-shaking-css": "^0.1.0",
     "antd-mobile": "^5.33.1",
     "pnpm": "^8.8.0",
     "react": "^18.2.0",

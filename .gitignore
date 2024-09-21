@@ -26,3 +26,6 @@ target
 /wasm/*
 !/wasm/*.d.ts
 /wasm-node/
+
+lib
+dist
