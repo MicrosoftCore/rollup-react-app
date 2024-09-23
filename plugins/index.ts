@@ -1,87 +1,354 @@
-import { Plugin } from 'rollup';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import type {
+	AstNode, ChangeEvent, CustomPluginOptions, InputOptions, InternalModuleFormat, LogLevel, MinimalPluginContext,
+	ModuleInfo, NormalizedInputOptions, NormalizedOutputOptions, OutputBundle, OutputOptions, Plugin, PluginContext,
+	ProgramNode, RenderedChunk, ResolvedIdMap, RollupLog, TransformPluginContext,
+} from 'rollup';
 
-export function MyPlugin(a, b, c, d): Plugin {
-    return {
-        augmentChunkHash(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        buildStart(options) {
-            // PluginContext
-            // => void | Promise<void>
-            console.log(options);
-        },
-        buildEnd(a, b, c, d) {
-            console.log('buildEnd');
-        },
-        closeBundle(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        closeWatcher(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        generateBundle(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        load(id) {
-            // PluginContext
-            // => LoadResult | Promise<LoadResult>
-            console.log(id);
-        },
-        moduleParsed(info) {
-            // PluginContext
-            // => void | Promise<void>
-            console.log(info);
-        },
-        onLog(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        options(options) {
-            // MinimalPluginContext
-            // => (InputOptions | NullValue) | Promise<InputOptions | NullValue>
-            console.log(options);
-        },
-        outputOptions(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        renderChunk(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        renderDynamicImport(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        renderError(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        renderStart(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        resolveDynamicImport(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        resolveFileUrl(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        resolveId(source, importer, options) {
-            // PluginContext 
-            // => ResolveIdResult | Promise<ResolveIdResult>
-            console.log(source, importer, options);
-        },
-        resolveImportMeta(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        shouldTransformCachedModule(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        transform(code, id) {
-            // TransformPluginContext
-            // => TransformResult | Promise<TransformResult>
-            console.log(code, id);
-        },
-        watchChange(a, b, c, d) {
-            console.log(a, b, c, d);
-        },
-        writeBundle(a, b, c, d) {
-            console.log(a, b, c, d);
-        }
-    }
+type ParallelPluginHooks =
+	| "renderError"
+	| "renderStart"
+	| "writeBundle"
+	| "banner"
+	| "footer"
+	| "intro"
+	| "outro"
+	| "buildEnd"
+	| "buildStart"
+	| "closeBundle"
+	| "closeWatcher"
+	| "moduleParsed"
+	| "watchChange"
+
+type AsyncPluginHooks =
+	| "generateBundle"
+	| "renderChunk"
+	| "renderError"
+	| "renderStart"
+	| "writeBundle"
+	| "buildEnd"
+	| "buildStart"
+	| "closeBundle"
+	| "closeWatcher"
+	| "load"
+	| "moduleParsed"
+	| "options"
+	| "resolveDynamicImport"
+	| "resolveId"
+	| "shouldTransformCachedModule"
+	| "transform"
+	| "watchChange"
+
+type AddonHooks = "banner" | "footer" | "intro" | "outro"
+
+type FirstPluginHooks =
+	| "renderDynamicImport"
+	| "resolveFileUrl"
+	| "resolveImportMeta"
+	| "load"
+	| "resolveDynamicImport"
+	| "resolveId"
+	| "shouldTransformCachedModule"
+
+type SequentialPluginHooks =
+	| "augmentChunkHash"
+	| "generateBundle"
+	| "outputOptions"
+	| "renderChunk"
+	| "onLog"
+	| "options"
+	| "transform"
+
+type ParallelHooksOptions = {
+	sequential?: boolean
+}
+
+export function MyPlugin(): Plugin {
+	return {
+		name: 'rollup-plugin-type',
+
+		/**
+			 * @param this
+			 * @param chunk
+			 * @returns {string | void}
+			 * @
+			 */
+		augmentChunkHash(this: PluginContext, chunk: RenderedChunk) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		buildStart(this: PluginContext, options: NormalizedInputOptions) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param error
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		buildEnd(this: PluginContext, error?: Error) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		closeBundle(this: PluginContext) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		closeWatcher(this: PluginContext) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @param bundle
+		 * @param isWrite
+		 * @returns {void | Promise<void>}
+		 */
+		generateBundle(this: PluginContext, options: NormalizedOutputOptions, bundle: OutputBundle, isWrite: boolean) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param id
+		 * @returns {LoadResult | Promise<LoadResult>}
+		 */
+		load(this: PluginContext, id: string) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param info
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		moduleParsed(this: PluginContext, info: ModuleInfo) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param level
+		 * @param log
+		 * @returns {boolean | NullValue}
+		 */
+		onLog(this: MinimalPluginContext, level: LogLevel, log: RollupLog) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @returns {NullValue | InputOptions | Promise<NullValue | InputOptions>}
+		 */
+		options(this: MinimalPluginContext, options: InputOptions) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @returns {OutputOptions | NullValue}
+		 */
+		outputOptions(this: PluginContext, options: OutputOptions) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param code
+		 * @param chunk
+		 * @param options
+		 * @param meta
+		 * @returns {{ code: string; map?: SourceMapInput } | string | NullValue}
+		 */
+		renderChunk(
+			this: PluginContext,
+			code: string,
+			chunk: RenderedChunk,
+			options: NormalizedOutputOptions,
+			meta: {
+				chunks: Record<string, RenderedChunk>;
+			},
+		) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @returns {{ left: string; right: string; } | NullValue}
+		 */
+		renderDynamicImport(
+			this: PluginContext,
+			options: {
+				customResolution: string | null;
+				format: InternalModuleFormat;
+				moduleId: string;
+				targetModuleId: string | null;
+			},
+		) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param error
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		renderError(this: PluginContext, error?: Error) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param outputOptions
+		 * @param inputOptions
+		 * @returns {void | Promise<void>}
+		 */
+		renderStart(this: PluginContext, outputOptions: NormalizedOutputOptions, inputOptions: NormalizedInputOptions) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param specifier
+		 * @param importer
+		 * @param options
+		 * @returns {string | NullValue | false | PartialResolvedId}
+		 */
+		resolveDynamicImport(
+			this: PluginContext,
+			specifier: string | AstNode,
+			importer: string,
+			options: {
+				attributes: Record<string, string>;
+			},
+		) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @returns {string | NullValue}
+		 */
+		resolveFileUrl(
+			this: PluginContext,
+			options: {
+				chunkId: string;
+				fileName: string;
+				format: InternalModuleFormat;
+				moduleId: string;
+				referenceId: string;
+				relativePath: string;
+			},
+		) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param source
+		 * @param importer
+		 * @param options
+		 * @returns {string | NullValue | false | PartialResolvedId}
+		 */
+		resolveId(
+			this: PluginContext,
+			source: string,
+			importer: string | undefined,
+			options: {
+				attributes: Record<string, string>;
+				isEntry: boolean;
+				custom?: CustomPluginOptions;
+			},
+		) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param property
+		 * @param options
+		 * @returns {string | NullValue}
+		 */
+		resolveImportMeta(
+			this: PluginContext,
+			property: string | null,
+			options: { chunkId: string; format: InternalModuleFormat; moduleId: string },
+		) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @returns {boolean | NullValue}
+		 */
+		shouldTransformCachedModule(this: PluginContext, options: {
+			ast: ProgramNode;
+			code: string;
+			id: string;
+			meta: CustomPluginOptions;
+			moduleSideEffects: boolean | "no-treeshake";
+			resolvedSources: ResolvedIdMap;
+			syntheticNamedExports: boolean | string;
+		}) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param code
+		 * @param id
+		 * @returns {TransformResult | Promise<TransformResult>}
+		 */
+		transform(this: TransformPluginContext, code: string, id: string) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param id
+		 * @param change
+		 * @returns {void | Promise<void>}
+		 * @param {ParallelHooksOptions} [o]
+		 */
+		watchChange(this: PluginContext, id: string, change: {
+			event: ChangeEvent;
+		}) {
+
+		},
+		/**
+		 *
+		 * @param this
+		 * @param options
+		 * @param bundle
+		 * @returns {void | Promise<void>}
+		 */
+		writeBundle(this: PluginContext, options: NormalizedOutputOptions, bundle: OutputBundle) {
+
+		},
+	}
 }
