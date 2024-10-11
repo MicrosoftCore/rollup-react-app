@@ -1,0 +1,1072 @@
+{
+    "type": "Program",
+    "start": 0,
+    "end": 1255,
+    "body": [
+        {
+            "type": "ImportDeclaration",
+            "start": 17,
+            "end": 43,
+            "specifiers": [
+                {
+                    "type": "ImportDefaultSpecifier",
+                    "start": 24,
+                    "end": 29,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 24,
+                        "end": 29,
+                        "name": "React"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 35,
+                "end": 42,
+                "value": "react",
+                "raw": "'react'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 44,
+            "end": 81,
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "start": 53,
+                    "end": 59,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 53,
+                        "end": 59,
+                        "name": "Button"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 53,
+                        "end": 59,
+                        "name": "Button"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 67,
+                "end": 80,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 82,
+            "end": 153,
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "start": 91,
+                    "end": 95,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 91,
+                        "end": 95,
+                        "name": "Card"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 91,
+                        "end": 95,
+                        "name": "Card"
+                    }
+                },
+                {
+                    "type": "ImportSpecifier",
+                    "start": 97,
+                    "end": 107,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 97,
+                        "end": 107,
+                        "name": "DatePicker"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 97,
+                        "end": 107,
+                        "name": "DatePicker"
+                    }
+                },
+                {
+                    "type": "ImportSpecifier",
+                    "start": 109,
+                    "end": 131,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 109,
+                        "end": 117,
+                        "name": "Calendar"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 121,
+                        "end": 131,
+                        "name": "MyCalendar"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 139,
+                "end": 152,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 154,
+            "end": 217,
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "start": 163,
+                    "end": 171,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 163,
+                        "end": 171,
+                        "name": "Ellipsis"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 163,
+                        "end": 171,
+                        "name": "Ellipsis"
+                    }
+                },
+                {
+                    "type": "ImportSpecifier",
+                    "start": 173,
+                    "end": 183,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 173,
+                        "end": 183,
+                        "name": "ErrorBlock"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 173,
+                        "end": 183,
+                        "name": "ErrorBlock"
+                    }
+                },
+                {
+                    "type": "ImportSpecifier",
+                    "start": 185,
+                    "end": 195,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 185,
+                        "end": 195,
+                        "name": "AutoCenter"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 185,
+                        "end": 195,
+                        "name": "AutoCenter"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 203,
+                "end": 216,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 218,
+            "end": 263,
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "start": 227,
+                    "end": 241,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 227,
+                        "end": 231,
+                        "name": "Grid"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 235,
+                        "end": 241,
+                        "name": "MyGrid"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 249,
+                "end": 262,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 264,
+            "end": 306,
+            "specifiers": [
+                {
+                    "type": "ImportNamespaceSpecifier",
+                    "start": 271,
+                    "end": 286,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 276,
+                        "end": 286,
+                        "name": "AntdMobile"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 292,
+                "end": 305,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 307,
+            "end": 344,
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "start": 316,
+                    "end": 322,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 316,
+                        "end": 322,
+                        "name": "TabBar"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 316,
+                        "end": 322,
+                        "name": "TabBar"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 330,
+                "end": 343,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 345,
+            "end": 380,
+            "specifiers": [
+                {
+                    "type": "ImportSpecifier",
+                    "start": 354,
+                    "end": 358,
+                    "imported": {
+                        "type": "Identifier",
+                        "start": 354,
+                        "end": 358,
+                        "name": "Tabs"
+                    },
+                    "local": {
+                        "type": "Identifier",
+                        "start": 354,
+                        "end": 358,
+                        "name": "Tabs"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 366,
+                "end": 379,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ImportDeclaration",
+            "start": 381,
+            "end": 418,
+            "specifiers": [
+                {
+                    "type": "ImportDefaultSpecifier",
+                    "start": 388,
+                    "end": 398,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 388,
+                        "end": 398,
+                        "name": "moduleName"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 404,
+                "end": 417,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "VariableDeclaration",
+            "start": 419,
+            "end": 482,
+            "kind": "const",
+            "declarations": [
+                {
+                    "type": "VariableDeclarator",
+                    "start": 425,
+                    "end": 481,
+                    "id": {
+                        "type": "ObjectPattern",
+                        "start": 425,
+                        "end": 468,
+                        "properties": [
+                            {
+                                "type": "Property",
+                                "start": 429,
+                                "end": 446,
+                                "method": false,
+                                "shorthand": false,
+                                "computed": false,
+                                "key": {
+                                    "type": "Identifier",
+                                    "start": 429,
+                                    "end": 441,
+                                    "name": "VirtualInput"
+                                },
+                                "value": {
+                                    "type": "Identifier",
+                                    "start": 443,
+                                    "end": 446,
+                                    "name": "bbb"
+                                },
+                                "kind": "init"
+                            },
+                            {
+                                "type": "Property",
+                                "start": 450,
+                                "end": 466,
+                                "method": false,
+                                "shorthand": true,
+                                "computed": false,
+                                "key": {
+                                    "type": "Identifier",
+                                    "start": 450,
+                                    "end": 466,
+                                    "name": "createErrorBlock"
+                                },
+                                "value": {
+                                    "type": "Identifier",
+                                    "start": 450,
+                                    "end": 466,
+                                    "name": "createErrorBlock"
+                                },
+                                "kind": "init"
+                            }
+                        ]
+                    },
+                    "init": {
+                        "type": "Identifier",
+                        "start": 471,
+                        "end": 481,
+                        "name": "AntdMobile"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 483,
+            "end": 845,
+            "specifiers": [],
+            "source": null,
+            "attributes": [],
+            "declaration": {
+                "type": "FunctionDeclaration",
+                "start": 490,
+                "end": 845,
+                "async": false,
+                "generator": false,
+                "id": {
+                    "type": "Identifier",
+                    "start": 499,
+                    "end": 502,
+                    "name": "App"
+                },
+                "params": [],
+                "body": {
+                    "type": "BlockStatement",
+                    "start": 505,
+                    "end": 845,
+                    "body": [
+                        {
+                            "type": "ReturnStatement",
+                            "start": 509,
+                            "end": 843,
+                            "argument": {
+                                "type": "CallExpression",
+                                "start": 529,
+                                "end": 842,
+                                "optional": false,
+                                "_rollupAnnotations": [
+                                    {
+                                        "end": 529,
+                                        "start": 516,
+                                        "type": "pure"
+                                    }
+                                ],
+                                "callee": {
+                                    "type": "MemberExpression",
+                                    "start": 529,
+                                    "end": 548,
+                                    "computed": false,
+                                    "optional": false,
+                                    "object": {
+                                        "type": "Identifier",
+                                        "start": 529,
+                                        "end": 534,
+                                        "name": "React"
+                                    },
+                                    "property": {
+                                        "type": "Identifier",
+                                        "start": 535,
+                                        "end": 548,
+                                        "name": "createElement"
+                                    }
+                                },
+                                "arguments": [
+                                    {
+                                        "type": "Literal",
+                                        "start": 549,
+                                        "end": 554,
+                                        "value": "div",
+                                        "raw": "\"div\""
+                                    },
+                                    {
+                                        "type": "Literal",
+                                        "start": 556,
+                                        "end": 560,
+                                        "raw": "null",
+                                        "value": null
+                                    },
+                                    {
+                                        "type": "CallExpression",
+                                        "start": 575,
+                                        "end": 631,
+                                        "optional": false,
+                                        "_rollupAnnotations": [
+                                            {
+                                                "end": 575,
+                                                "start": 562,
+                                                "type": "pure"
+                                            }
+                                        ],
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "start": 575,
+                                            "end": 594,
+                                            "computed": false,
+                                            "optional": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "start": 575,
+                                                "end": 580,
+                                                "name": "React"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "start": 581,
+                                                "end": 594,
+                                                "name": "createElement"
+                                            }
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Literal",
+                                                "start": 595,
+                                                "end": 600,
+                                                "value": "div",
+                                                "raw": "\"div\""
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "start": 602,
+                                                "end": 606,
+                                                "raw": "null",
+                                                "value": null
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "start": 608,
+                                                "end": 630,
+                                                "value": "Rollup is amazing!!!",
+                                                "raw": "\"Rollup is amazing!!!\""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "CallExpression",
+                                        "start": 646,
+                                        "end": 725,
+                                        "optional": false,
+                                        "_rollupAnnotations": [
+                                            {
+                                                "end": 646,
+                                                "start": 633,
+                                                "type": "pure"
+                                            }
+                                        ],
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "start": 646,
+                                            "end": 665,
+                                            "computed": false,
+                                            "optional": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "start": 646,
+                                                "end": 651,
+                                                "name": "React"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "start": 652,
+                                                "end": 665,
+                                                "name": "createElement"
+                                            }
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Identifier",
+                                                "start": 666,
+                                                "end": 672,
+                                                "name": "Button"
+                                            },
+                                            {
+                                                "type": "ObjectExpression",
+                                                "start": 674,
+                                                "end": 700,
+                                                "properties": [
+                                                    {
+                                                        "type": "Property",
+                                                        "start": 680,
+                                                        "end": 696,
+                                                        "method": false,
+                                                        "shorthand": false,
+                                                        "computed": false,
+                                                        "key": {
+                                                            "type": "Identifier",
+                                                            "start": 680,
+                                                            "end": 685,
+                                                            "name": "color"
+                                                        },
+                                                        "value": {
+                                                            "type": "Literal",
+                                                            "start": 687,
+                                                            "end": 696,
+                                                            "value": "primary",
+                                                            "raw": "\"primary\""
+                                                        },
+                                                        "kind": "init"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "start": 702,
+                                                "end": 724,
+                                                "value": "Rollup is amazing!!!",
+                                                "raw": "\"Rollup is amazing!!!\""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "CallExpression",
+                                        "start": 740,
+                                        "end": 789,
+                                        "optional": false,
+                                        "_rollupAnnotations": [
+                                            {
+                                                "end": 740,
+                                                "start": 727,
+                                                "type": "pure"
+                                            }
+                                        ],
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "start": 740,
+                                            "end": 759,
+                                            "computed": false,
+                                            "optional": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "start": 740,
+                                                "end": 745,
+                                                "name": "React"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "start": 746,
+                                                "end": 759,
+                                                "name": "createElement"
+                                            }
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "MemberExpression",
+                                                "start": 760,
+                                                "end": 776,
+                                                "computed": false,
+                                                "optional": false,
+                                                "object": {
+                                                    "type": "Identifier",
+                                                    "start": 760,
+                                                    "end": 770,
+                                                    "name": "AntdMobile"
+                                                },
+                                                "property": {
+                                                    "type": "Identifier",
+                                                    "start": 771,
+                                                    "end": 776,
+                                                    "name": "Badge"
+                                                }
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "start": 778,
+                                                "end": 782,
+                                                "raw": "null",
+                                                "value": null
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "start": 784,
+                                                "end": 788,
+                                                "value": "88",
+                                                "raw": "\"88\""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "CallExpression",
+                                        "start": 804,
+                                        "end": 841,
+                                        "optional": false,
+                                        "_rollupAnnotations": [
+                                            {
+                                                "end": 804,
+                                                "start": 791,
+                                                "type": "pure"
+                                            }
+                                        ],
+                                        "callee": {
+                                            "type": "MemberExpression",
+                                            "start": 804,
+                                            "end": 823,
+                                            "computed": false,
+                                            "optional": false,
+                                            "object": {
+                                                "type": "Identifier",
+                                                "start": 804,
+                                                "end": 809,
+                                                "name": "React"
+                                            },
+                                            "property": {
+                                                "type": "Identifier",
+                                                "start": 810,
+                                                "end": 823,
+                                                "name": "createElement"
+                                            }
+                                        },
+                                        "arguments": [
+                                            {
+                                                "type": "Identifier",
+                                                "start": 824,
+                                                "end": 834,
+                                                "name": "MyCalendar"
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "start": 836,
+                                                "end": 840,
+                                                "raw": "null",
+                                                "value": null
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "expression": false
+            }
+        },
+        {
+            "type": "VariableDeclaration",
+            "start": 846,
+            "end": 868,
+            "kind": "const",
+            "declarations": [
+                {
+                    "type": "VariableDeclarator",
+                    "start": 852,
+                    "end": 867,
+                    "id": {
+                        "type": "Identifier",
+                        "start": 852,
+                        "end": 854,
+                        "name": "bb"
+                    },
+                    "init": {
+                        "type": "Identifier",
+                        "start": 857,
+                        "end": 867,
+                        "name": "AntdMobile"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 869,
+            "end": 895,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 878,
+                    "end": 880,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 878,
+                        "end": 880,
+                        "name": "bb"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 878,
+                        "end": 880,
+                        "name": "bb"
+                    }
+                },
+                {
+                    "type": "ExportSpecifier",
+                    "start": 882,
+                    "end": 892,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 882,
+                        "end": 892,
+                        "name": "MyCalendar"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 882,
+                        "end": 892,
+                        "name": "MyCalendar"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 896,
+            "end": 938,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 905,
+                    "end": 935,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 905,
+                        "end": 915,
+                        "name": "MyCalendar"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 919,
+                        "end": 935,
+                        "name": "ExportMyCalendar"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 939,
+            "end": 977,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 948,
+                    "end": 974,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 948,
+                        "end": 956,
+                        "name": "Ellipsis"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 960,
+                        "end": 974,
+                        "name": "ExportEllipsis"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 978,
+            "end": 1023,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 987,
+                    "end": 1001,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 987,
+                        "end": 1001,
+                        "name": "NumberKeyboard"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 987,
+                        "end": 1001,
+                        "name": "NumberKeyboard"
+                    }
+                }
+            ],
+            "source": {
+                "type": "Literal",
+                "start": 1009,
+                "end": 1022,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 1024,
+            "end": 1058,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 1033,
+                    "end": 1043,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 1033,
+                        "end": 1043,
+                        "name": "AntdMobile"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 1033,
+                        "end": 1043,
+                        "name": "AntdMobile"
+                    }
+                },
+                {
+                    "type": "ExportSpecifier",
+                    "start": 1045,
+                    "end": 1055,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 1045,
+                        "end": 1055,
+                        "name": "ErrorBlock"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 1045,
+                        "end": 1055,
+                        "name": "ErrorBlock"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 1059,
+            "end": 1087,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 1068,
+                    "end": 1084,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 1068,
+                        "end": 1084,
+                        "name": "createErrorBlock"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 1068,
+                        "end": 1084,
+                        "name": "createErrorBlock"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportAllDeclaration",
+            "start": 1088,
+            "end": 1133,
+            "exported": {
+                "type": "Identifier",
+                "start": 1100,
+                "end": 1113,
+                "name": "AllAntdMobile"
+            },
+            "source": {
+                "type": "Literal",
+                "start": 1119,
+                "end": 1132,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 1134,
+            "end": 1152,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 1143,
+                    "end": 1149,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 1143,
+                        "end": 1149,
+                        "name": "TabBar"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 1143,
+                        "end": 1149,
+                        "name": "TabBar"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportNamedDeclaration",
+            "start": 1153,
+            "end": 1179,
+            "specifiers": [
+                {
+                    "type": "ExportSpecifier",
+                    "start": 1162,
+                    "end": 1176,
+                    "local": {
+                        "type": "Identifier",
+                        "start": 1162,
+                        "end": 1166,
+                        "name": "Tabs"
+                    },
+                    "exported": {
+                        "type": "Identifier",
+                        "start": 1170,
+                        "end": 1176,
+                        "name": "MyTabs"
+                    }
+                }
+            ],
+            "source": null,
+            "attributes": [],
+            "declaration": null
+        },
+        {
+            "type": "ExportAllDeclaration",
+            "start": 1180,
+            "end": 1222,
+            "exported": {
+                "type": "Identifier",
+                "start": 1192,
+                "end": 1202,
+                "name": "ExportAntd"
+            },
+            "source": {
+                "type": "Literal",
+                "start": 1208,
+                "end": 1221,
+                "value": "antd-mobile",
+                "raw": "'antd-mobile'"
+            },
+            "attributes": []
+        },
+        {
+            "type": "ExportDefaultDeclaration",
+            "start": 1223,
+            "end": 1255,
+            "declaration": {
+                "type": "Identifier",
+                "start": 1238,
+                "end": 1254,
+                "name": "createErrorBlock"
+            }
+        }
+    ],
+    "sourceType": "module"
+}

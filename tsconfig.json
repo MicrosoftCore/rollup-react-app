@@ -20,7 +20,7 @@
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
 		"skipLibCheck": true,
-		"inlineSourceMap": true,
+		"sourceMap": true,
 		"strictFunctionTypes": true,
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
@@ -34,6 +34,9 @@
 			"ESNext"
 		],
 		"paths": {
+			"@rollkits/plugin-shaking-css/*": [
+				"../rollup-plugins/packages/shaking-css/src/*"
+			],
 			"@/*": [
 				"src/*"
 			]

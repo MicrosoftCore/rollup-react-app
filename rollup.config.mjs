@@ -5,7 +5,8 @@ import replace from '@rollup/plugin-replace';
 import styles from 'rollup-plugin-styles';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'rollup';
-import { MyPlugin } from './lib/shaking.js';
+// import { MyPlugin } from './lib/shaking.js';
+import { MyPlugin } from './lib/index.js';
 
 export default defineConfig({
    input: 'src/index.js',
@@ -32,10 +33,10 @@ export default defineConfig({
       //    title: 'ilbb',
       //    open: true,
       // }),
-      replace({
-         preventAssignment: false,
-         'process.env.NODE_ENV': '"development"'
-      }),
+      // replace({
+      //    preventAssignment: false,
+      //    'process.env.NODE_ENV': '"development"'
+      // }),
       MyPlugin()
    ]
 })

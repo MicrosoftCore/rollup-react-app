@@ -1,0 +1,595 @@
+{
+  "bundle.js": {
+    "exports": [],
+    "facadeModuleId": "D:\\wkspace\\rollup-react-app\\src\\index.js",
+    "isDynamicEntry": false,
+    "isEntry": true,
+    "isImplicitEntry": false,
+    "moduleIds": [
+      "\u0000commonjsHelpers.js",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\index.js?commonjs-module",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\cjs\\react.development.js?commonjs-module",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\cjs\\react.development.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\index.js",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\client.js?commonjs-exports",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\index.js?commonjs-module",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\index.js?commonjs-module",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\cjs\\scheduler.development.js?commonjs-exports",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\cjs\\scheduler.development.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\index.js",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\cjs\\react-dom.development.js?commonjs-exports",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\cjs\\react-dom.development.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\client.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\can-use-dom.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\global\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\tslib@2.6.3\\node_modules\\tslib\\tslib.es6.mjs",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\locales\\zh-CN.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\config-provider\\config-provider.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\attach-properties-to-component.js",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\classnames@2.5.1\\node_modules\\classnames\\index.js?commonjs-module",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\classnames@2.5.1\\node_modules\\classnames\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\native-props.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\with-default-props.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\createUpdateEffect\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\utils\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\useMemoizedFn\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\useUpdateEffect\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\useUpdate\\index.js",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\dayjs.min.js?commonjs-module",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\dayjs.min.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\badge\\badge.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\badge\\index.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\dot-loading\\dot-loading.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\validate.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\button\\button.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\arrow-left.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\arrow-left-double.js",
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\plugin\\isoWeek.js?commonjs-module",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\plugin\\isoWeek.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\use-props-value.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\replace-message.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\dev-log.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\convert.js",
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\calendar.js",
+      "D:\\wkspace\\rollup-react-app\\src\\App.jsx",
+      "D:\\wkspace\\rollup-react-app\\src\\index.js"
+    ],
+    "name": "index",
+    "type": "chunk",
+    "dynamicImports": [],
+    "fileName": "bundle.js",
+    "implicitlyLoadedBefore": [],
+    "importedBindings": {},
+    "imports": [],
+    "modules": {
+      "\u0000commonjsHelpers.js": {
+        "code": "",
+        "originalLength": 1294,
+        "removedExports": [
+          "getDefaultExportFromNamespaceIfPresent",
+          "getDefaultExportFromNamespaceIfNotNamed",
+          "getAugmentedNamespace"
+        ],
+        "renderedExports": [
+          "commonjsGlobal",
+          "getDefaultExportFromCjs"
+        ],
+        "renderedLength": 334
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\index.js?commonjs-module": {
+        "code": "",
+        "originalLength": 53,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 26
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\cjs\\react.development.js?commonjs-module": {
+        "code": "",
+        "originalLength": 77,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 38
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\cjs\\react.development.js": {
+        "code": "",
+        "originalLength": 87593,
+        "removedExports": [],
+        "renderedExports": [
+          "__require"
+        ],
+        "renderedLength": 101148
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react@18.3.1\\node_modules\\react\\index.js": {
+        "code": "",
+        "originalLength": 190,
+        "removedExports": [],
+        "renderedExports": [
+          "default",
+          "__moduleExports"
+        ],
+        "renderedLength": 148
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\client.js?commonjs-exports": {
+        "code": "",
+        "originalLength": 45,
+        "removedExports": [],
+        "renderedExports": [
+          "__exports"
+        ],
+        "renderedLength": 16
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\index.js?commonjs-module": {
+        "code": "",
+        "originalLength": 59,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 29
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\index.js?commonjs-module": {
+        "code": "",
+        "originalLength": 61,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 30
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\cjs\\scheduler.development.js?commonjs-exports": {
+        "code": "",
+        "originalLength": 75,
+        "removedExports": [],
+        "renderedExports": [
+          "__exports"
+        ],
+        "renderedLength": 31
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\cjs\\scheduler.development.js": {
+        "code": "",
+        "originalLength": 17497,
+        "removedExports": [],
+        "renderedExports": [
+          "__require"
+        ],
+        "renderedLength": 20103
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\scheduler@0.23.2\\node_modules\\scheduler\\index.js": {
+        "code": "",
+        "originalLength": 198,
+        "removedExports": [],
+        "renderedExports": [
+          "__require"
+        ],
+        "renderedLength": 228
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\cjs\\react-dom.development.js?commonjs-exports": {
+        "code": "",
+        "originalLength": 73,
+        "removedExports": [],
+        "renderedExports": [
+          "__exports"
+        ],
+        "renderedLength": 30
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\cjs\\react-dom.development.js": {
+        "code": "",
+        "originalLength": 1029600,
+        "removedExports": [],
+        "renderedExports": [
+          "__require"
+        ],
+        "renderedLength": 864946
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\index.js": {
+        "code": "",
+        "originalLength": 1363,
+        "removedExports": [
+          "default"
+        ],
+        "renderedExports": [
+          "__moduleExports"
+        ],
+        "renderedLength": 96
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\react-dom@18.3.1_react@18.3.1\\node_modules\\react-dom\\client.js": {
+        "code": "",
+        "originalLength": 619,
+        "removedExports": [
+          "createRoot",
+          "hydrateRoot"
+        ],
+        "renderedExports": [
+          "__moduleExports",
+          "default"
+        ],
+        "renderedLength": 470
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\can-use-dom.js": {
+        "code": "",
+        "originalLength": 146,
+        "removedExports": [],
+        "renderedExports": [
+          "canUseDom"
+        ],
+        "renderedLength": 139
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\global\\index.js": {
+        "code": "",
+        "originalLength": 422,
+        "removedExports": [],
+        "renderedExports": [],
+        "renderedLength": 349
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\tslib@2.6.3\\node_modules\\tslib\\tslib.es6.mjs": {
+        "code": "",
+        "originalLength": 16530,
+        "removedExports": [
+          "__extends",
+          "__assign",
+          "__rest",
+          "__decorate",
+          "__param",
+          "__esDecorate",
+          "__runInitializers",
+          "__propKey",
+          "__setFunctionName",
+          "__metadata",
+          "__generator",
+          "__createBinding",
+          "__exportStar",
+          "__values",
+          "__spread",
+          "__spreadArrays",
+          "__spreadArray",
+          "__await",
+          "__asyncGenerator",
+          "__asyncDelegator",
+          "__asyncValues",
+          "__makeTemplateObject",
+          "__importStar",
+          "__importDefault",
+          "__classPrivateFieldGet",
+          "__classPrivateFieldSet",
+          "__classPrivateFieldIn",
+          "__addDisposableResource",
+          "__disposeResources",
+          "default"
+        ],
+        "renderedExports": [
+          "__awaiter",
+          "__read"
+        ],
+        "renderedLength": 2139
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\locales\\zh-CN.js": {
+        "code": "",
+        "originalLength": 2751,
+        "removedExports": [],
+        "renderedExports": [
+          "default"
+        ],
+        "renderedLength": 2730
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\config-provider\\config-provider.js": {
+        "code": "",
+        "originalLength": 826,
+        "removedExports": [
+          "setDefaultConfig",
+          "ConfigProvider"
+        ],
+        "renderedExports": [
+          "defaultConfigRef",
+          "getDefaultConfig",
+          "useConfig"
+        ],
+        "renderedLength": 335
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\attach-properties-to-component.js": {
+        "code": "",
+        "originalLength": 229,
+        "removedExports": [],
+        "renderedExports": [
+          "attachPropertiesToComponent"
+        ],
+        "renderedLength": 222
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\classnames@2.5.1\\node_modules\\classnames\\index.js?commonjs-module": {
+        "code": "",
+        "originalLength": 63,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 31
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\classnames@2.5.1\\node_modules\\classnames\\index.js": {
+        "code": "",
+        "originalLength": 1530,
+        "removedExports": [],
+        "renderedExports": [
+          "default",
+          "__moduleExports"
+        ],
+        "renderedLength": 1545
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\native-props.js": {
+        "code": "",
+        "originalLength": 647,
+        "removedExports": [],
+        "renderedExports": [
+          "withNativeProps"
+        ],
+        "renderedLength": 589
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\with-default-props.js": {
+        "code": "",
+        "originalLength": 652,
+        "removedExports": [
+          "mergeProp"
+        ],
+        "renderedExports": [
+          "mergeProps"
+        ],
+        "renderedLength": 251
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\createUpdateEffect\\index.js": {
+        "code": "",
+        "originalLength": 476,
+        "removedExports": [
+          "default"
+        ],
+        "renderedExports": [
+          "createUpdateEffect"
+        ],
+        "renderedLength": 415
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\utils\\index.js": {
+        "code": "",
+        "originalLength": 505,
+        "removedExports": [
+          "isObject",
+          "isString",
+          "isBoolean",
+          "isNumber",
+          "isUndef"
+        ],
+        "renderedExports": [
+          "isFunction"
+        ],
+        "renderedLength": 76
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\useMemoizedFn\\index.js": {
+        "code": "",
+        "originalLength": 806,
+        "removedExports": [],
+        "renderedExports": [
+          "default"
+        ],
+        "renderedLength": 688
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\useUpdateEffect\\index.js": {
+        "code": "",
+        "originalLength": 140,
+        "removedExports": [],
+        "renderedExports": [
+          "default"
+        ],
+        "renderedLength": 65
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\ahooks@3.8.0_react@18.3.1\\node_modules\\ahooks\\es\\useUpdate\\index.js": {
+        "code": "",
+        "originalLength": 265,
+        "removedExports": [],
+        "renderedExports": [
+          "default"
+        ],
+        "renderedLength": 186
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\dayjs.min.js?commonjs-module": {
+        "code": "",
+        "originalLength": 61,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 30
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\dayjs.min.js": {
+        "code": "",
+        "originalLength": 7160,
+        "removedExports": [],
+        "renderedExports": [
+          "default",
+          "__moduleExports"
+        ],
+        "renderedLength": 12415
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\badge\\badge.js": {
+        "code": "",
+        "originalLength": 989,
+        "removedExports": [],
+        "renderedExports": [
+          "dot",
+          "Badge"
+        ],
+        "renderedLength": 919
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\badge\\index.js": {
+        "code": "",
+        "originalLength": 211,
+        "removedExports": [],
+        "renderedExports": [
+          "default"
+        ],
+        "renderedLength": 60
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\dot-loading\\dot-loading.js": {
+        "code": "",
+        "originalLength": 1643,
+        "removedExports": [],
+        "renderedExports": [
+          "DotLoading"
+        ],
+        "renderedLength": 1579
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\validate.js": {
+        "code": "",
+        "originalLength": 935,
+        "removedExports": [
+          "isDef",
+          "isObject",
+          "isDate",
+          "isMobile",
+          "isNumeric",
+          "isAndroid",
+          "isIOS"
+        ],
+        "renderedExports": [
+          "isPromise"
+        ],
+        "renderedLength": 104
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\button\\button.js": {
+        "code": "",
+        "originalLength": 2479,
+        "removedExports": [],
+        "renderedExports": [
+          "Button"
+        ],
+        "renderedLength": 2253
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\arrow-left.js": {
+        "code": "",
+        "originalLength": 1427,
+        "removedExports": [],
+        "renderedExports": [
+          "ArrowLeft"
+        ],
+        "renderedLength": 1484
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\arrow-left-double.js": {
+        "code": "",
+        "originalLength": 2122,
+        "removedExports": [],
+        "renderedExports": [
+          "ArrowLeftDouble"
+        ],
+        "renderedLength": 2192
+      },
+      "\u0000D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\plugin\\isoWeek.js?commonjs-module": {
+        "code": "",
+        "originalLength": 57,
+        "removedExports": [],
+        "renderedExports": [
+          "__module"
+        ],
+        "renderedLength": 30
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\dayjs@1.11.11\\node_modules\\dayjs\\plugin\\isoWeek.js": {
+        "code": "",
+        "originalLength": 999,
+        "removedExports": [],
+        "renderedExports": [
+          "default",
+          "__moduleExports"
+        ],
+        "renderedLength": 1319
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\use-props-value.js": {
+        "code": "",
+        "originalLength": 828,
+        "removedExports": [],
+        "renderedExports": [
+          "usePropsValue"
+        ],
+        "renderedLength": 751
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\replace-message.js": {
+        "code": "",
+        "originalLength": 263,
+        "removedExports": [],
+        "renderedExports": [
+          "replaceMessage"
+        ],
+        "renderedLength": 256
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\utils\\dev-log.js": {
+        "code": "",
+        "originalLength": 1086,
+        "removedExports": [
+          "devError",
+          "devPrint"
+        ],
+        "renderedExports": [
+          "devWarning"
+        ],
+        "renderedLength": 111
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\convert.js": {
+        "code": "",
+        "originalLength": 340,
+        "removedExports": [],
+        "renderedExports": [
+          "convertValueToRange",
+          "convertPageToDayjs"
+        ],
+        "renderedLength": 299
+      },
+      "D:\\wkspace\\rollup-react-app\\node_modules\\.pnpm\\antd-mobile@5.37.1_react-dom@18.3.1_react@18.3.1\\node_modules\\antd-mobile\\es\\components\\calendar\\calendar.js": {
+        "code": "",
+        "originalLength": 8853,
+        "removedExports": [],
+        "renderedExports": [
+          "Calendar"
+        ],
+        "renderedLength": 8377
+      },
+      "D:\\wkspace\\rollup-react-app\\src\\App.jsx": {
+        "code": "",
+        "originalLength": 1224,
+        "removedExports": [
+          "bb",
+          "ExportEllipsis",
+          "AntdMobile",
+          "ErrorBlock",
+          "createErrorBlock",
+          "TabBar",
+          "MyTabs",
+          "default"
+        ],
+        "renderedExports": [
+          "App",
+          "MyCalendar",
+          "ExportMyCalendar"
+        ],
+        "renderedLength": 359
+      },
+      "D:\\wkspace\\rollup-react-app\\src\\index.js": {
+        "code": "",
+        "originalLength": 204,
+        "removedExports": [],
+        "renderedExports": [],
+        "renderedLength": 104
+      }
+    },
+    "referencedFiles": [],
+    "code": "",
+    "map": null,
+    "preliminaryFileName": "bundle.js",
+    "sourcemapFileName": null
+  },
+  "assets/bundle-YcRy-_bY.css": {
+    "fileName": "assets/bundle-YcRy-_bY.css",
+    "name": "bundle.css",
+    "needsCodeReference": false,
+    "originalFileName": null,
+    "source": "",
+    "type": "asset"
+  }
+}

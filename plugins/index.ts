@@ -132,7 +132,10 @@ export function MyPlugin(): Plugin {
 		 * @returns {LoadResult | Promise<LoadResult>}
 		 */
 		load(this: PluginContext, id: string) {
-
+			// this.load({
+			// 	id,
+			// 	resolveDependencies: true
+			// })
 		},
 		/**
 		 *
@@ -274,17 +277,38 @@ export function MyPlugin(): Plugin {
 		 * @param options
 		 * @returns {string | NullValue | false | PartialResolvedId}
 		 */
-		resolveId(
-			this: PluginContext,
-			source: string,
-			importer: string | undefined,
-			options: {
-				attributes: Record<string, string>;
-				isEntry: boolean;
-				custom?: CustomPluginOptions;
-			},
-		) {
+		resolveId: {
+			async handler(
+				this: PluginContext,
+				source: string,
+				importer: string | undefined,
+				options: {
+					attributes: Record<string, string>;
+					isEntry: boolean;
+					custom?: CustomPluginOptions;
+				},
+			) {
+				// const { isEntry, custom, attributes } = options
+				const resolveId = await this.resolve(source, importer, { ...options, skipSelf: true, })
 
+				if (resolveId) {
+					const moduleInfo = await this.load({
+						id: resolveId.id,
+						resolveDependencies: true,
+						attributes: resolveId.attributes,
+						meta: resolveId.meta,
+						moduleSideEffects: resolveId.moduleSideEffects,
+						syntheticNamedExports: resolveId.syntheticNamedExports
+					})
+
+					// console.log(moduleInfo);
+
+					return resolveId.id
+				} else {
+					return null
+					// throw new Error("can not resolve source")
+				}
+			}
 		},
 		/**
 		 *
